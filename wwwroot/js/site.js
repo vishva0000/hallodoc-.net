@@ -6,8 +6,11 @@ var t = document.getElementById("theme-btn"); //Moon icon
 var m = document.getElementById("moon");
 var sun = document.getElementById("sun");
 var x = document.getElementById("password"); // Input
+var xc = document.getElementById("confirmPassword"); // Input
 var s = document.getElementById("show"); // Show pass
 var h = document.getElementById("hide"); // Hide pass
+var sc = document.getElementById("showc"); // Show pass
+var hc = document.getElementById("hidec"); // Hide pass
 var ft = 0;
 
 window.onload = function (event) {
@@ -54,5 +57,17 @@ function togglePass() {
         x.type = "password";
         s.style.display = "inline";
         h.style.display = "none";
+    }
+}
+
+function togglePassForConfirm() {
+    if (xc.type === "password") {
+        xc.type = "text";
+        sc.style.display = "none";
+        hc.style.display = "inline";
+    } else {
+        xc.type = "password";
+        sc.style.display = "inline";
+        hc.style.display = "none";
     }
 }

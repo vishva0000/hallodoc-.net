@@ -4,6 +4,8 @@
 @{
     Layout = "_RequestHeader";
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 <div class="modal fade"
      id="myModal"
      tabindex="-1"
@@ -15,7 +17,9 @@
             <div class="modal-body">
                 <div class="d-flex flex-column align-items-center justify-content-center">
                     <div class="warning_icon">
-                        <i class="bi bi-exclamation-circle-fill"></i>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="85" height="85" fill="currentColor" class="bi bi-exclamation-circle-fill war-i" viewBox="0 0 16 16">
+                                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0M8 4a.905.905 0 0 0-.9.995l.35 3.507a.552.552 0 0 0 1.1 0l.35-3.507A.905.905 0 0 0 8 4m.002 6a1 1 0 1 0 0 2 1 1 0 0 0 0-2" />
+                            </svg>
                     </div>
                     <h4 class="my-3">Infromation</h4>
                     <p class="text-center my-3">
@@ -232,3 +236,16 @@
         </form>
     </div>
 </div>
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInputField1 = document.querySelector("#phone1");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    const phoneInput1 = window.intlTelInput(phoneInputField1, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>

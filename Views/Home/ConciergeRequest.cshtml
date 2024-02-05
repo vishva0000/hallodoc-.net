@@ -4,6 +4,8 @@
 @{
     Layout = "_RequestHeader";
 }
+<script src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/intlTelInput.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/css/intlTelInput.css" />
 <div class="d-flex justify-content-center">
     <div class="mt-2 shadow p-3 mb-5 bg-white rounded">
         <div class="d-flex justify-content-end">
@@ -181,3 +183,16 @@
         </form>
     </div>
 </div>
+
+<script>
+    const phoneInputField = document.querySelector("#phone");
+    const phoneInputField1 = document.querySelector("#phone1");
+    const phoneInput = window.intlTelInput(phoneInputField, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+    const phoneInput1 = window.intlTelInput(phoneInputField1, {
+        utilsScript:
+            "https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.8/js/utils.js",
+    });
+</script>
