@@ -28,3 +28,15 @@ D:\New folder\hallodoc\obj\Debug\net7.0\refint\hallodoc.dll
 D:\New folder\hallodoc\obj\Debug\net7.0\hallodoc.pdb
 D:\New folder\hallodoc\obj\Debug\net7.0\hallodoc.genruntimeconfig.cache
 D:\New folder\hallodoc\obj\Debug\net7.0\ref\hallodoc.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Humanizer.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Abstractions.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Design.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Microsoft.EntityFrameworkCore.Relational.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Microsoft.Extensions.DependencyModel.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Mono.TextTemplating.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Npgsql.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+D:\New folder\hallodoc\bin\Debug\net7.0\System.CodeDom.dll
+D:\New folder\hallodoc\obj\Debug\net7.0\hallodoc.csproj.AssemblyReference.cache
+D:\New folder\hallodoc\obj\Debug\net7.0\hallodoc.csproj.CopyComplete

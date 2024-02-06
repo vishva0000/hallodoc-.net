@@ -1,4 +1,5 @@
-﻿using hallodoc.Models;
+﻿using hallodoc.dto;
+using hallodoc.Models;
 using Microsoft.AspNetCore.Mvc;
 using System.Diagnostics;
 
@@ -22,14 +23,23 @@ namespace hallodoc.Controllers
         {
             return View();
         }
+        [HttpGet]
         public IActionResult Patientlogin()
         {
+            return View();
+        }
+        [HttpPost]
+        public IActionResult Patientlogin(LoginDto model)
+        {   
+            if (ModelState.IsValid) { }
+
             return View();
         }
         public IActionResult Forgotpassword()
         {
             return View();
         }
+       
         public IActionResult SubmitRequest()
         {
             return View();

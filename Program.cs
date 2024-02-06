@@ -1,9 +1,20 @@
+using hallodoc.Models;
+using Microsoft.EntityFrameworkCore;
+
 var builder = WebApplication.CreateBuilder(args);
+
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
 
+
+
+builder.Services.AddDbContext<HallodocContext>(options =>
+options.UseNpgsql(builder.Configuration.GetConnectionString("HalloDoclocal")));
+
+
 var app = builder.Build();
+
 
 // Configure the HTTP request pipeline.
 if (!app.Environment.IsDevelopment())
