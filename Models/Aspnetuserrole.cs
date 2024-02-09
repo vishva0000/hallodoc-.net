@@ -9,5 +9,5 @@ public partial class Aspnetuserrole
 
     public string Roleid { get; set; } = null!;
 
-    public virtual Aspnetuser User { get; set; } = null!;
+    public virtual AspNetUser User { get; set; } = null!;
 }

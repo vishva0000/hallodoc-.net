@@ -1,46 +1,49 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace hallodoc.Models;
 
-public partial class Aspnetuser
+public partial class AspNetUser
 {
     public string Id { get; set; } = null!;
 
-    public string Username { get; set; } = null!;
+    public string UserName { get; set; } = null!;
 
-    public string? Passwordhash { get; set; }
-
-    public string? Securitystamp { get; set; }
+    public string? PasswordHash { get; set; }
 
     public string? Email { get; set; }
 
-    public BitArray Emailconfirmed { get; set; } = null!;
-
-    public string? Phonenumber { get; set; }
-
-    public BitArray Phonenumberconfirmed { get; set; } = null!;
-
-    public BitArray Twofactorenabled { get; set; } = null!;
-
-    public DateTime? Lockoutenddateutc { get; set; }
-
-    public BitArray Lockoutenabled { get; set; } = null!;
-
-    public int Accessfailedcount { get; set; }
+    public string? PhoneNumber { get; set; }
 
     public string? Ip { get; set; }
 
-    public string? Corepasswordhash { get; set; }
+    public DateTime? CreatedDate { get; set; }
 
-    public int? Hashversion { get; set; }
+    public virtual ICollection<Admin> AdminAspNetUsers { get; set; } = new List<Admin>();
 
-    public DateTime? Modifieddate { get; set; }
+    public virtual ICollection<Admin> AdminCreatedByNavigations { get; set; } = new List<Admin>();
 
-    public virtual ICollection<Admin> AdminAspnetusers { get; set; } = new List<Admin>();
+    public virtual ICollection<Admin> AdminModifiedByNavigations { get; set; } = new List<Admin>();
 
-    public virtual ICollection<Admin> AdminModifiedbyNavigations { get; set; } = new List<Admin>();
+    public virtual ICollection<Business> BusinessCreatedByNavigations { get; set; } = new List<Business>();
 
-    public virtual ICollection<Aspnetuserrole> Aspnetuserroles { get; set; } = new List<Aspnetuserrole>();
+    public virtual ICollection<Business> BusinessModifiedByNavigations { get; set; } = new List<Business>();
+
+    public virtual ICollection<Physician> PhysicianAspNetUsers { get; set; } = new List<Physician>();
+
+    public virtual ICollection<Physician> PhysicianCreatedByNavigations { get; set; } = new List<Physician>();
+
+    public virtual ICollection<Physician> PhysicianModifiedByNavigations { get; set; } = new List<Physician>();
+
+    public virtual ICollection<RequestNote> RequestNoteCreatedByNavigations { get; set; } = new List<RequestNote>();
+
+    public virtual ICollection<RequestNote> RequestNoteModifiedByNavigations { get; set; } = new List<RequestNote>();
+
+    public virtual ICollection<ShiftDetail> ShiftDetails { get; set; } = new List<ShiftDetail>();
+
+    public virtual ICollection<Shift> Shifts { get; set; } = new List<Shift>();
+
+    public virtual ICollection<User> Users { get; set; } = new List<User>();
+
+    public virtual ICollection<AspNetRole> Roles { get; set; } = new List<AspNetRole>();
 }

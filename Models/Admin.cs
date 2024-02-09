@@ -1,18 +1,17 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
 
 namespace hallodoc.Models;
 
 public partial class Admin
 {
-    public int Adminid { get; set; }
+    public int AdminId { get; set; }
 
-    public string? Aspnetuserid { get; set; }
+    public string AspNetUserId { get; set; } = null!;
 
-    public string? Firstname { get; set; }
+    public string FirstName { get; set; } = null!;
 
-    public string? Lastname { get; set; }
+    public string? LastName { get; set; }
 
     public string Email { get; set; } = null!;
 
@@ -24,29 +23,39 @@ public partial class Admin
 
     public string? City { get; set; }
 
-    public int? Regionid { get; set; }
+    public int? RegionId { get; set; }
 
     public string? Zip { get; set; }
 
-    public string? Altphone { get; set; }
+    public string? AltPhone { get; set; }
 
-    public string Createdby { get; set; } = null!;
+    public string CreatedBy { get; set; } = null!;
 
-    public DateTime Createddate { get; set; }
+    public DateTime CreatedDate { get; set; }
 
-    public string? Modifiedby { get; set; }
+    public string? ModifiedBy { get; set; }
 
-    public DateTime? Modifieddate { get; set; }
+    public DateTime? ModifiedDate { get; set; }
 
-    public int? Status { get; set; }
+    public short? Status { get; set; }
 
-    public BitArray? Isdeleted { get; set; }
+    public bool? IsDeleted { get; set; }
 
-    public int? Roleid { get; set; }
+    public int? RoleId { get; set; }
 
-    public virtual ICollection<Adminregion> Adminregions { get; set; } = new List<Adminregion>();
+    public virtual ICollection<AdminRegion> AdminRegions { get; set; } = new List<AdminRegion>();
 
-    public virtual Aspnetuser? Aspnetuser { get; set; }
+    public virtual AspNetUser AspNetUser { get; set; } = null!;
 
-    public virtual Aspnetuser? ModifiedbyNavigation { get; set; }
+    public virtual AspNetUser CreatedByNavigation { get; set; } = null!;
+
+    public virtual ICollection<EmailLog> EmailLogs { get; set; } = new List<EmailLog>();
+
+    public virtual AspNetUser? ModifiedByNavigation { get; set; }
+
+    public virtual ICollection<RequestStatusLog> RequestStatusLogs { get; set; } = new List<RequestStatusLog>();
+
+    public virtual ICollection<RequestWiseFile> RequestWiseFiles { get; set; } = new List<RequestWiseFile>();
+
+    public virtual ICollection<Smslog> Smslogs { get; set; } = new List<Smslog>();
 }

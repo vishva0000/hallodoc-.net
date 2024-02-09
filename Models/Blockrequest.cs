@@ -4,23 +4,23 @@ using System.Collections.Generic;
 
 namespace hallodoc.Models;
 
-public partial class Blockrequest
+public partial class BlockRequest
 {
-    public int Blockrequestid { get; set; }
+    public int BlockRequestId { get; set; }
 
-    public string? Phonenumber { get; set; }
+    public string? PhoneNumber { get; set; }
 
     public string? Email { get; set; }
 
-    public BitArray? Isactive { get; set; }
+    public BitArray? IsActive { get; set; }
 
     public string? Reason { get; set; }
 
-    public string Requestid { get; set; } = null!;
+    public string RequestId { get; set; } = null!;
 
     public string? Ip { get; set; }
 
-    public DateTime? Createddate { get; set; }
+    public DateTime? CreatedDate { get; set; }
 
-    public DateTime? Modifieddate { get; set; }
+    public DateTime? ModifiedDate { get; set; }
 }
